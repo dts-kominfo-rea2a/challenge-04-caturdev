@@ -12,7 +12,7 @@ const createDate = (dates, position) => {
   if (position) {
     return String(Math.round(new Date(dates[position]).getTime() / 1000));
   } else {
-    return dates.map(date => Math.round(new Date(date).getTime() / 1000)).join("-")
+    return dates.map(date => Math.round(new Date(date).getTime() / 1000)).sort().join("-")
   }
 };
 
