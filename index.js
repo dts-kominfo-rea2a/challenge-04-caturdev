@@ -8,7 +8,13 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = null;
+const createDate = (dates, position) => {
+  if (position) {
+    return Math.round(new Date(dates[position]).getTime() / 1000);
+  } else {
+    return dates.map(date => Math.round(new Date(date).getTime() / 1000)).join("-")
+  }
+};
 
 // ! JANGAN DIMODIFIKASI
 (() => {
